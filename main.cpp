@@ -2,25 +2,33 @@
 #include <stdlib.h>
 #define VECTOR_SIZE 5
 
-int main (void) {
-    // Declaração de variáveis
+extern void BubbleSort(int[], int);
+
+int main(void)
+{
+    /*
+       Declaração de variáveis
+    */
     int vetor[VECTOR_SIZE];
-    int index;
-
-    // Entrada de dados
-    for (index=0; index < VECTOR_SIZE; index++) {
-        printf("\nVetor[%2d] -> ", index);
-        scanf("%i", &vetor[index]);
+    int indx;
+    /*
+        Entrada de Dados
+    */
+    for (indx=0; indx < VECTOR_SIZE; indx++)
+    {
+        printf("\nVetor[%2d] -> ", indx);
+        scanf("%i",&vetor[indx]);
     }
-
-    // Ordenação BubbleSort
+    /*
+        Odenação BubleSort
+    */
     BubbleSort(vetor, VECTOR_SIZE);
-
-    // Saída de dados
-    
-
-
-    
-    
-    return 0;
+    /*
+        Saída de Dados
+    */
+    for (indx=0; indx < VECTOR_SIZE; indx++)
+    {
+        printf("\nVetor[%2d] -> %4d ", indx, vetor[indx]);
+    }
+    printf("\n\n\n");
 }
